@@ -1,0 +1,23 @@
+.row
+  a.pizza_button(data-action="rotateX") Rotate X
+  a.pizza_button(data-action="rotateY") Rotate Y
+  a.pizza_button(data-action="rotateZ") Rotate Z
+.row
+  a.pizza_button(data-action="bounceX") Bounce X
+  a.pizza_button(data-action="bounceY") Bounce Y
+  a.pizza_button(data-action="bounceZ") Bounce Z
+
+.row.textures
+  each texture in model.textures
+    a.pizza_texture(data-action="setTexture", data-texture=texture)
+      img(src=texture)
+
+.row.text
+  input(type="text", class="text", value=model.get('text'))
+
+.row.last
+  a.bake(data-action="bake") Bake
+
+.right
+
+.bottom

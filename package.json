@@ -1,0 +1,20 @@
+{
+  "name": "pizza-text",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node run.js"
+  },
+  "dependencies": {
+    "express": "3.2.6",
+    "jade": "*",
+    "stylus": "*",
+    "passport": "latest",
+    "passport-tumblr": "latest",
+    "coffee-script": "latest",
+    "js-yaml": "latest",
+    "mongoose": "latest",
+    "aws-sdk": "latest",
+    "node-uuid": "latest"
+  }
+}

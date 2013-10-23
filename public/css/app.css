@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("/images/pizza.png");
+}
+.home-view {
+  min-width: 900px;
+}
+.home-view p {
+  margin-bottom: 2.5rem;
+}
+.front {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.scene {
+  background: #000;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  -ms-transition: -ms-transform 1s;
+  transition: transform 1s;
+  border: 1px solid #fff;
+}
+.bake {
+  position: absolute;
+}
+.scene.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.canvas {
+  display: inline-block;
+  width: 600px;
+  height: 300px;
+  background: #2c4762;
+  margin: auto;
+}
+.view.gif {
+  width: 600px;
+  height: 300px;
+  display: inline-block;
+  margin: auto;
+}
+.progress {
+  background: #000;
+  width: 200px;
+  height: 300px;
+  margin: auto;
+}
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.progress .pie {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+.progress .pizza {
+  content: "";
+  position: absolute;
+  right: 200px;
+  top: 50px;
+  width: 200px;
+  height: 200px;
+  background: url("/images/progress.png") no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  -webkit-animation: rotating 2s linear infinite;
+}
+.progress .percent {
+  position: absolute;
+  top: 100px;
+  right: 200px;
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 64px;
+}
+.done .progress {
+  display: none;
+}
+.controls {
+  width: 600px;
+  background: #000;
+  margin: auto;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.start-button {
+  float: left;
+}
+.tumblr_share {
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 129px;
+  height: 20px;
+  background: url("http://platform.tumblr.com/v1/share_3.png") top left no-repeat transparent;
+}
+.controls > a {
+  float: left;
+  margin-bottom: 20px;
+}
+.controls .row {
+  display: table;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+.controls .row > a {
+  display: table-cell;
+  width: 560px;
+}
+a.pizza_button {
+  font-family: helvetica;
+  padding-left: 35px;
+  line-height: 28px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  cursor: pointer;
+  text-shadow: #808080 0.1em 0.1em 0.2em;
+}
+a.pizza_button:before {
+  content: "";
+  margin-left: -35px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("/images/progress.png") no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+a.pizza_button.active:before {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-animation: rotating 2s linear infinite;
+}
+.controls > .row.last {
+  margin-top: 25px;
+}
+.row.textures {
+  margin-top: 25px;
+}
+.row.textures > a {
+  text-align: center;
+}
+a.pizza_texture {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+a.pizza_texture.active {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+a.pizza_texture img {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+a.bake {
+  font-family: helvetica;
+  line-height: 28px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+a.bake:before,
+a.bake:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0px;
+  background: url("/images/progress.png") no-repeat;
+  -webkit-background-size: 30px;
+  -moz-background-size: 30px;
+  background-size: 30px;
+}
+a.bake:hover:before,
+a.bake:hover:after {
+  -webkit-animation: rotating 2s linear infinite;
+}
+a.bake:before {
+  left: 200px;
+}
+a.bake:after {
+  right: 200px;
+}
+body {
+  background-image: url("/images/arrow.jpeg");
+  background-position: 0px 0px;
+  background-repeat: repeat;
+}
+.row .text {
+  text-align: center;
+  width: 80%;
+  font-family: helvetica;
+  font-size: 20px;
+  color: #fff;
+  background: #000;
+}

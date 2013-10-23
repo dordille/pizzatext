@@ -1,0 +1,25 @@
+{
+  "author": "Dan Ordille",
+  "name": "pizza-text",
+  "private": true,
+  "description": "3text client",
+  "version": "0.1.0",
+  "homepage": "http://www.pizzatext.net",
+  "engines": {
+    "node": "0.9.x"
+  },
+  "dependencies": {
+    "brunch": "1.x.x",
+    "javascript-brunch": "1.x.x",
+    "coffee-script-brunch": "1.7.0",
+    "css-brunch": "1.x.x",
+    "stylus-brunch": "1.x.x",
+    "jade-brunch": "1.x.x",
+    "uglify-js-brunch": "1.x.x",
+    "clean-css-brunch": "1.x.x"
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "chai": "x.x.x"
+  }
+}
