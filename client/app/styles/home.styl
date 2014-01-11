@@ -15,15 +15,15 @@ body
 
 .front
   position: absolute
-  backface-visibility: hidden
 
 .back
+  background: #000
+  width: 100%
+  height: 100%
   position: absolute
-  backface-visibility: hidden
   transform: rotateY( 180deg )
 
 .scene
-  background: #000
   width: width
   height: height
   margin: auto
@@ -32,6 +32,9 @@ body
   transform-style: preserve-3d
   transition: transform 1s
   border: 1px solid white
+
+.scene > div
+  backface-visibility: hidden
 
 .bake
   position: absolute
@@ -46,7 +49,8 @@ body
   background: #2c4762
   margin: auto
 
-
+.scratch
+  position: absolute
 
 .view.gif
   width: width
@@ -56,8 +60,8 @@ body
   
 .progress
   background: #000
-  width: 200px
-  height: height
+  width: 100%
+  height: 100%
   margin: auto
 
 @-webkit-keyframes rotating
