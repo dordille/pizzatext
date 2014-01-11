@@ -1263,7 +1263,7 @@ window.require.register("views/templates/controls", function(exports, require, m
 window.require.register("views/templates/gif", function(exports, require, module) {
   module.exports = function anonymous(locals) {
   var buf = [];
-  var locals_ = (locals || {}),imgsrc = locals_.imgsrc;buf.push("<a href=\"#\" title=\"Back\" class=\"scratch\">Back</a><img" + (jade.attrs({ 'src':(imgsrc), "class": [('gif')] }, {"src":true})) + "/><a href=\"#\" title=\"Share on Tumblr\" class=\"tumblr_share\">Share on Tumblr</a>");;return buf.join("");
+  var locals_ = (locals || {}),imgsrc = locals_.imgsrc;buf.push("<img" + (jade.attrs({ 'src':(imgsrc), "class": [('gif')] }, {"src":true})) + "/><a href=\"#\" title=\"Share on Tumblr\" class=\"tumblr_share\">Share on Tumblr</a>");;return buf.join("");
   };
 });
 window.require.register("views/templates/header", function(exports, require, module) {
